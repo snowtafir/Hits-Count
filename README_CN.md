@@ -40,7 +40,7 @@ CREATE TABLE counters ( name TEXT PRIMARY KEY, count INTEGER DEFAULT 0 );
 - svg图片
 
 ```
-https://your.domain/hits_github.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
+https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
 ```
 
 | Parameter  | Values               | Description                       | 说明                         |
@@ -65,8 +65,8 @@ https://your.domain/hits_github.svg?action=view&count_bg=%233DC8C0&title_bg=%235
 
 | Request | Description | 说明 |
 |-|-|-|
-| ```https://your.domain/hits_github.svg?action=view``` | View only | 仅展示 |
-| ```https://your.domain/hits_github.svg?action=hit``` | Hit & View | 点击并展示 |
+| ```https://your.domain/keyword?action=view``` | View only | 仅展示 |
+| ```https://your.domain/keyword?action=hit``` | Hit & View | 点击并展示 |
 
 返回JSON结果
 ```
