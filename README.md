@@ -27,7 +27,7 @@ CREATE TABLE counters ( name TEXT PRIMARY KEY, count INTEGER DEFAULT 0 );
 
 ### 2. Create Workers
 
-Navigate to **Workers & Pages** > **Create application** > **Create Worker**, name it _hits_. Copy the [hit.js](https://github.com/xykt/Hits/blob/main/hits.js) code into the Worker editor. Modify line 7 to change the domain to your counter's domain, and set the keyword. Each counter corresponds to a keyword. For subsequent counters, simply add a new keyword.
+Navigate to **Workers & Pages** > **Create application** > **Create Worker**, name it _hits_. Copy the [hit.js](https://github.com/xykt/Hits/blob/main/hits.js) code into the Worker editor. Modify line 7 to change the domain to your counter's domain, and set the keywords in line 8. Each counter corresponds to a keyword. For subsequent counters, simply add new keywords for them.
 
 
 ### 3. Configure Bindings
