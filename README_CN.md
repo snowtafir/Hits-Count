@@ -1,4 +1,4 @@
-# Hits! - 基于Workers的综合访问计数器
+# Hits! - 基于Cloudflare Workers的综合访问计数器
 <p>
 <img src="https://hits.xykt.de/hits_github.svg?action=hit&count_bg=%2396E6A7&title_bg=%23555555&title=Visits&edge_flat=false&ts=${new Date().getTime()}"/> 
 <a href="/LICENSE"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="license" /></a>  
