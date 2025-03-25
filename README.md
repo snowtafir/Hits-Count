@@ -80,6 +80,8 @@ Return JSON 返回JSON结果
 }
 ```
 
-### Acknowledgements 贡献
+### Acknowledgements
+
+- Thanks to [酒神@Nodeseek](https://www.nodeseek.com/space/9#/general) for technical support and valuable feedback.
 
 Welcome to submit Pull Request or Issue! 欢迎提交Pull Request或Issue！
