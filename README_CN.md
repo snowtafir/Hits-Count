@@ -82,4 +82,6 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 
 ### 🤝 贡献
 
+- 感谢[酒神@Nodeseek](https://www.nodeseek.com/space/9#/general)，你为本项目提供了技术支持及宝贵建议
+
 欢迎提交Pull Request或Issue！
