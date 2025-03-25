@@ -65,8 +65,8 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 
 | Request | Description | 说明 |
 |-|-|-|
-| ```https://your.domain/keyword.svg?action=view``` | View only | 仅展示 |
-| ```https://your.domain/keyword.svg?action=hit``` | Hit & View | 点击并展示 |
+| ```https://your.domain/keyword?action=view``` | View only | 仅展示 |
+| ```https://your.domain/keyword?action=hit``` | Hit & View | 点击并展示 |
 
 Return JSON 返回JSON结果
 ```
