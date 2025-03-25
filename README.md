@@ -40,7 +40,7 @@ In the Worker **Settings** > **Bindings** > **Add** > **D1 Database**, enter the
 - SVG Image
 
 ```
-https://your.domain/hits_github.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
+https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
 ```
 
 | Parameter  | Values               | Description                       | 说明                         |
@@ -65,8 +65,8 @@ https://your.domain/hits_github.svg?action=view&count_bg=%233DC8C0&title_bg=%235
 
 | Request | Description | 说明 |
 |-|-|-|
-| ```https://your.domain/hits_github.svg?action=view``` | View only | 仅展示 |
-| ```https://your.domain/hits_github.svg?action=hit``` | Hit & View | 点击并展示 |
+| ```https://your.domain/keyword.svg?action=view``` | View only | 仅展示 |
+| ```https://your.domain/keyword.svg?action=hit``` | Hit & View | 点击并展示 |
 
 Return JSON 返回JSON结果
 ```
