@@ -39,7 +39,7 @@ CREATE TABLE counters ( name TEXT PRIMARY KEY, count INTEGER DEFAULT 0 );
 
 - svg图片
 
-```
+```url
 https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
 ```
 
@@ -51,7 +51,7 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 | title      | TitleToShow          | Text to display                   | 展示标题                    |
 | edge_flat  | true / false        | Sharp or rounded corners        | 尖角/圆角                   |
 
-| [Style](https://github.com/xykt/Hits/blob/main/res/style.md)       | Black | Gray | Blue | Green | Purple | Red |
+| [Styles](https://github.com/xykt/Hits/blob/main/res/style.md)       | Black | Gray | Blue | Green | Purple | Red |
 |---------------|-------|------|------|-------|--------|-----|
 | **Red** | ![1](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/11.svg) | ![2](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/12.svg) | ![3](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/13.svg) | ![4](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/14.svg) | ![5](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/15.svg) | ![6](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/16.svg) |
 | **Orange** | ![7](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/21.svg) | ![8](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/22.svg) | ![9](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/23.svg) | ![10](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/24.svg) | ![11](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/25.svg) | ![12](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/26.svg) |
@@ -70,7 +70,7 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 | ```https://your.domain/keyword?action=hit``` | Hit & View | 点击并展示 |
 
 返回JSON结果
-```
+```json
 {
   "counter": "keyword",
   "action": "hit",
