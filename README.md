@@ -69,7 +69,7 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 | ```https://your.domain/keyword?action=view``` | View only | 仅展示 |
 | ```https://your.domain/keyword?action=hit``` | Hit & View | 点击并展示 |
 
-Return JSON 返回JSON结果
+JSON Response
 ```
 {
   "counter": "keyword",
@@ -85,4 +85,4 @@ Return JSON 返回JSON结果
 
 - Thanks to [酒神@Nodeseek](https://www.nodeseek.com/space/9#/general) for technical support and valuable feedback.
 
-Welcome to submit Pull Request or Issue! 欢迎提交Pull Request或Issue！
+Welcome to submit Pull Request or Issue!
