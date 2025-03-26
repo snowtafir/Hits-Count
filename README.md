@@ -13,7 +13,7 @@ Hits! A completely free, serverless, lightweight access counter system based on 
 - 💰 **Completely Free** - Utilizes Cloudflare's free plan
 - 📊 **Multi-Site Support** - Supports multiple counters via different keywords
 - 🔒 **Secure and Reliable** - Powered by Cloudflare's global network
-- 👀 **Colorful Display** - Supports customizable color SVG and JSON output
+- 🎨 **Colorful Display** - Supports customizable color SVG and JSON output
 
 ## 🛠 Quick Deployment Guide
 
@@ -72,10 +72,10 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 Return JSON 返回JSON结果
 ```
 {
-  "counter": "counter_name",
+  "counter": "keyword",
   "action": "hit",
-  "total": 135062,
-  "daily": 1091,
+  "total": 1024,
+  "daily": 64,
   "date": "2025-03-25",
   "timestamp": "2025-03-25T09:50:53.096Z"
 }
