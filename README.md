@@ -35,7 +35,7 @@ Navigate to **Workers & Pages** > **Create application** > **Create Worker**, na
 In the Worker **Settings** > **Bindings** > **Add** > **D1 Database**, enter the variable name as _HITS_, and select the _hits_ database. In **Domains & Routes** - **Add** - **Custom domain**, add your newly configured counter domain.
 
 
-#### 4. How to Use
+### 4. How to Use
 
 - SVG Image
 
