@@ -35,7 +35,7 @@ CREATE TABLE counters ( name TEXT PRIMARY KEY, count INTEGER DEFAULT 0 );
 在Worker的 **Settings** > **Bindings** > **Add** > **D1 Database**中，变量名称输入 _HITS_，数据库选择 _hits_。在Worker的 **Domains & Routes** - **Add** - **Custom domain**中添加您的刚才设定的计数器域名
 
 
-#### 4. 使用方法
+### 4. 使用方法
 
 - svg图片
 
