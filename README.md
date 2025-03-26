@@ -39,7 +39,7 @@ In the Worker **Settings** > **Bindings** > **Add** > **D1 Database**, enter the
 
 - SVG Image
 
-```
+```url
 https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
 ```
 
@@ -70,7 +70,7 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 | ```https://your.domain/keyword?action=hit``` | Hit & View | 点击并展示 |
 
 JSON Response
-```
+```json
 {
   "counter": "keyword",
   "action": "hit",
