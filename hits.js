@@ -1,9 +1,11 @@
+// Update Version 2025-03-29
 export default {
   async fetch(request, env, ctx) {
     return handleRequest(request, env.HITS)
   }
 }
 
+// Replace this part with your domain and keyword(s)
 const ALLOWED_DOMAIN = 'your.domain.com'
 const ALLOWED_PATHS = ['keyword1', 'keyword2', 'keyword3']
 
@@ -94,10 +96,18 @@ async function updateCounter(db, key, value) {
   `).bind(key, value).run()
 }
 
+function getTextWidth(text) {
+  let width = 0
+  for (const char of text) {
+    width += char.charCodeAt(0) > 255 ? 14 : 7
+  }
+  return width + 10
+}
+
 function generateSvg({ title, titleBg, countBg, edgeFlat, dailyCount, totalCount }) {
   const borderRadius = edgeFlat ? '0' : '3'
   const countText = `${dailyCount} / ${totalCount}`
-  const titleWidth = title.length * 7 + 10
+  const titleWidth = getTextWidth(title)
   const countWidth = countText.length * 7 + 10
   const width = countWidth + titleWidth
 
