@@ -1,6 +1,6 @@
 # Hits! - General purpose hits counter based on Cloudflare Workers （[中文说明](https://github.com/xykt/Hits/blob/main/README_CN.md)）
 <p>
-<img src="https://hits.xykt.de/hits_github.svg?action=hit&count_bg=%23FFA552&title_bg=%231D8834&title=Visits&edge_flat=false&ts=${new Date().getTime()}"/>
+<img src="https://hits.xykt.de/hits_github.svg?action=hit&count_bg=%23FFA552&title_bg=%231D8834&title=Visits&edge_flat=false"/>
 <img src="https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/update.svg"/>
 <a href="/LICENSE"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="license" /></a>  
 </p> 
