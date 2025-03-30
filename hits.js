@@ -1,4 +1,4 @@
-// Update Version 2025-03-29
+// Update Version 2025-03-31
 export default {
   async fetch(request, env, ctx) {
     return handleRequest(request, env.HITS)
@@ -8,6 +8,28 @@ export default {
 // Replace this part with your domain and keyword(s)
 const ALLOWED_DOMAIN = 'your.domain.com'
 const ALLOWED_PATHS = ['keyword1', 'keyword2', 'keyword3']
+
+const namedColors = {
+  brightgreen: '#4c1',
+  green: '#97ca00',
+  yellow: '#dfb317',
+  yellowgreen: '#a4a61d',
+  orange: '#fe7d37',
+  red: '#e05d44',
+  blue: '#007ec6',
+  grey: '#555',
+  lightgrey: '#9f9f9f',
+}
+
+const aliases = {
+  gray: 'grey',
+  lightgray: 'lightgrey',
+  critical: 'red',
+  important: 'orange',
+  success: 'brightgreen',
+  informational: 'blue',
+  inactive: 'lightgrey',
+}
 
 async function handleRequest(request, db) {
   const url = new URL(request.url)
@@ -96,6 +118,10 @@ async function updateCounter(db, key, value) {
   `).bind(key, value).run()
 }
 
+function resolveColor(color) {
+  return namedColors[aliases[color] || color] || color;
+}
+
 function getTextWidth(text) {
   let width = 0
   for (const char of text) {
@@ -104,12 +130,15 @@ function getTextWidth(text) {
   return width + 10
 }
 
-function generateSvg({ title, titleBg, countBg, edgeFlat, dailyCount, totalCount }) {
+function generateSvg({ title, titleBg = 'grey', countBg = 'green', edgeFlat, dailyCount, totalCount }) {
   const borderRadius = edgeFlat ? '0' : '3'
   const countText = `${dailyCount} / ${totalCount}`
   const titleWidth = getTextWidth(title)
   const countWidth = countText.length * 7 + 10
   const width = countWidth + titleWidth
+
+  const resolvedTitleBg = resolveColor(titleBg)
+  const resolvedCountBg = resolveColor(countBg)
 
   return `
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="20">
@@ -123,8 +152,8 @@ function generateSvg({ title, titleBg, countBg, edgeFlat, dailyCount, totalCount
   </mask>
 
   <g mask="url(#round)">
-    <rect width="${titleWidth}" height="20" fill="${titleBg}"/>
-    <rect x="${titleWidth}" width="${countWidth}" height="20" fill="${countBg}"/>
+    <rect width="${titleWidth}" height="20" fill="${resolvedTitleBg}"/>
+    <rect x="${titleWidth}" width="${countWidth}" height="20" fill="${resolvedCountBg}"/>
     <rect width="${width}" height="20" fill="url(#smooth)"/>
   </g>
 
