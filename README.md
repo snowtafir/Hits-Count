@@ -8,7 +8,7 @@
 <a href="/LICENSE"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="license" /></a>  
 </p> 
 
-Hits! A completely free, serverless, lightweight access counter system based on **Cloudflare Workers** and **D1 SQL Database**, supporting JSON and GitHub-style SVG images, with quick deployment in just one minute
+Hits! A completely free, serverless, lightweight access counter system based on **Cloudflare Workers** and **D1 SQL Database**, supporting JSON and GitHub ([Shields.io](https://shields.io/)) style SVG images, with quick deployment in just one minute
 
 ## ✨ Features
 
