@@ -1,7 +1,7 @@
 # Hits! - General purpose hits counter based on Cloudflare Workers （[中文说明](https://github.com/xykt/Hits/blob/main/README_CN.md)）
 <p>
 <img src="https://hits.xykt.de/hits_github.svg?action=hit&count_bg=%23FFA552&title_bg=%231D8834&title=Hits!&edge_flat=false"/>
-<img src="https://img.shields.io/badge/Version-2025--03--29-green"/>
+<img src="https://img.shields.io/badge/Version-2025--03--31-green"/>
 <img src="https://img.shields.io/badge/Uptime-100%25-green"/>
 <img src="https://img.shields.io/badge/Deploy-Serverless-blue"/>
 <img src="https://img.shields.io/badge/Cost-FREE-blue"/>
@@ -55,7 +55,19 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 | title      | TitleToShow          | Text to display                   | 展示标题                    |
 | edge_flat  | true / false        | Sharp or rounded corners        | 尖角/圆角                   |
 
-| [Styles](https://github.com/xykt/Hits/blob/main/res/style.md)       | Black | Gray | Blue | Green | Purple | Red |
+| [Shields.io](https://shields.io/) [Presets](https://github.com/badges/shields/blob/master/badge-maker/lib/color.js#L6)    | [Aliases](https://github.com/badges/shields/blob/master/badge-maker/lib/color.js#L18)  | Hits! Counter Example | Shields.io Example |
+|--------------|-----------|----------------------------|--------------------|
+| `count_bg=brightgreen` | `success` | ![brightgreen](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/brightgreen.svg) | ![shields-brightgreen](https://img.shields.io/badge/Shields.io-brightgreen-brightgreen) |
+| `count_bg=green`       |  | ![green](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/green.svg) | ![shields-green](https://img.shields.io/badge/Shields.io-green-green) |
+| `count_bg=yellow`      |  | ![yellow](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/yellow.svg) | ![shields-yellow](https://img.shields.io/badge/Shields.io-yellow-yellow) |
+| `count_bg=yellowgreen` |  | ![yellowgreen](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/yellowgreen.svg) | ![shields-yellowgreen](https://img.shields.io/badge/Shields.io-yellowgreen-yellowgreen) |
+| `count_bg=orange`      | `important` | ![orange](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/orange.svg) | ![shields-orange](https://img.shields.io/badge/Shields.io-orange-orange) |
+| `count_bg=red`         | `critical` | ![red](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/red.svg) | ![shields-red](https://img.shields.io/badge/Shields.io-red-red) |
+| `count_bg=blue`        | `informational` | ![blue](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/blue.svg) | ![shields-blue](https://img.shields.io/badge/Shields.io-blue-blue) |
+| `count_bg=grey`        | `gray` | ![grey](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/grey.svg) | ![shields-grey](https://img.shields.io/badge/Shields.io-grey-grey) |
+| `count_bg=lightgrey`   | `lightgray` `inactive` | ![lightgrey](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/lightgrey.svg) | ![shields-lightgrey](https://img.shields.io/badge/Shields.io-lightgrey-lightgrey) |
+
+| [Custom](https://github.com/xykt/Hits/blob/main/res/style.md)       | Black | Gray | Blue | Green | Purple | Red |
 |---------------|-------|------|------|-------|--------|-----|
 | **Red** | ![1](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/11.svg) | ![2](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/12.svg) | ![3](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/13.svg) | ![4](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/14.svg) | ![5](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/15.svg) | ![6](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/16.svg) |
 | **Orange** | ![7](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/21.svg) | ![8](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/22.svg) | ![9](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/23.svg) | ![10](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/24.svg) | ![11](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/25.svg) | ![12](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/26.svg) |
@@ -79,9 +91,9 @@ JSON Response
   "counter": "keyword",
   "action": "hit",
   "total": 1024,
-  "daily": 64,
-  "date": "2025-03-25",
-  "timestamp": "2025-03-25T09:50:53.096Z"
+  "daily": 32,
+  "date": "2025-03-31",
+  "timestamp": "2025-03-31T04:08:16.512Z"
 }
 ```
 
