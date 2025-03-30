@@ -67,7 +67,7 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 | `count_bg=grey`        | `gray` | ![grey](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/grey.svg) | ![shields-grey](https://img.shields.io/badge/Shields.io-grey-grey) |
 | `count_bg=lightgrey`   | `lightgray` `inactive` | ![lightgrey](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/lightgrey.svg) | ![shields-lightgrey](https://img.shields.io/badge/Shields.io-lightgrey-lightgrey) |
 
-| [Custom](https://github.com/xykt/Hits/blob/main/res/style.md)       | Black | Gray | Blue | Green | Purple | Red |
+| [自定义](https://github.com/xykt/Hits/blob/main/res/style.md)       | Black | Gray | Blue | Green | Purple | Red |
 |---------------|-------|------|------|-------|--------|-----|
 | **Red** | ![1](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/11.svg) | ![2](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/12.svg) | ![3](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/13.svg) | ![4](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/14.svg) | ![5](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/15.svg) | ![6](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/16.svg) |
 | **Orange** | ![7](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/21.svg) | ![8](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/22.svg) | ![9](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/23.svg) | ![10](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/24.svg) | ![11](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/25.svg) | ![12](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/26.svg) |
