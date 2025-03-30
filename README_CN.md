@@ -8,7 +8,7 @@
 <a href="/LICENSE"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="license" /></a>  
 </p> 
 
-Hits! 一款完全免费、无需服务器、基于 **Cloudflare Workers** 和 **D1 SQL Database** 的轻量级访问计数器系统，支持JSON及GitHub风格svg图片，一分钟快速部署
+Hits! 一款完全免费、无需服务器、基于 **Cloudflare Workers** 和 **D1 SQL Database** 的轻量级访问计数器系统，支持JSON及GitHub（[Shields.io](https://shields.io/)）风格SVG图片，一分钟快速部署
 
 ## ✨ 功能特性
 
@@ -17,7 +17,7 @@ Hits! 一款完全免费、无需服务器、基于 **Cloudflare Workers** 和 *
 - 💰 **完全免费** - 使用Cloudflare免费套餐
 - 📊 **多站点支持** - 通过不同keyword支持多个计数器
 - 🔒 **安全可靠** - 基于Cloudflare全球网络
-- 🎨 **多彩展示** - 支持自定义色彩的svg及JSON输出
+- 🎨 **多彩展示** - 支持自定义色彩的SVG及JSON输出
 
 ## 🛠 快速部署指南
 
@@ -41,7 +41,7 @@ CREATE TABLE counters ( name TEXT PRIMARY KEY, count INTEGER DEFAULT 0 );
 
 ### 4. 使用方法
 
-- svg图片
+- SVG图片
 
 ```url
 https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
@@ -67,15 +67,15 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
 | `count_bg=grey`        | `gray` | ![grey](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/grey.svg) | ![shields-grey](https://img.shields.io/badge/Shields.io-grey-grey) |
 | `count_bg=lightgrey`   | `lightgray` `inactive` | ![lightgrey](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/lightgrey.svg) | ![shields-lightgrey](https://img.shields.io/badge/Shields.io-lightgrey-lightgrey) |
 
-| [自定义](https://github.com/xykt/Hits/blob/main/res/style.md)       | Black | Gray | Blue | Green | Purple | Red |
+| [自定义](https://github.com/xykt/Hits/blob/main/res/style.md)       | 黑色 | 灰色 | 蓝色 | 绿色 | 紫色 | 红色 |
 |---------------|-------|------|------|-------|--------|-----|
-| **Red** | ![1](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/11.svg) | ![2](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/12.svg) | ![3](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/13.svg) | ![4](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/14.svg) | ![5](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/15.svg) | ![6](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/16.svg) |
-| **Orange** | ![7](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/21.svg) | ![8](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/22.svg) | ![9](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/23.svg) | ![10](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/24.svg) | ![11](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/25.svg) | ![12](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/26.svg) |
-| **Yellow** | ![13](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/31.svg) | ![14](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/32.svg) | ![15](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/33.svg) | ![16](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/34.svg) | ![17](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/35.svg) | ![18](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/36.svg) |
-| **Green** | ![19](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/41.svg) | ![20](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/42.svg) | ![21](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/43.svg) | ![22](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/44.svg) | ![23](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/45.svg) | ![24](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/46.svg) |
-| **Blue** | ![25](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/51.svg) | ![26](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/52.svg) | ![27](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/53.svg) | ![28](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/54.svg) | ![29](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/55.svg) | ![30](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/56.svg) |
-| **Purple** | ![31](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/61.svg) | ![32](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/62.svg) | ![33](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/63.svg) | ![34](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/64.svg) | ![35](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/65.svg) | ![36](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/66.svg) |
-| **Gray** | ![37](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/71.svg) | ![38](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/72.svg) | ![39](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/73.svg) | ![40](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/74.svg) | ![41](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/75.svg) | ![42](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/76.svg) |
+| **红色** | ![1](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/11.svg) | ![2](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/12.svg) | ![3](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/13.svg) | ![4](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/14.svg) | ![5](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/15.svg) | ![6](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/16.svg) |
+| **橘色** | ![7](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/21.svg) | ![8](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/22.svg) | ![9](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/23.svg) | ![10](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/24.svg) | ![11](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/25.svg) | ![12](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/26.svg) |
+| **黄色** | ![13](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/31.svg) | ![14](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/32.svg) | ![15](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/33.svg) | ![16](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/34.svg) | ![17](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/35.svg) | ![18](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/36.svg) |
+| **绿色** | ![19](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/41.svg) | ![20](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/42.svg) | ![21](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/43.svg) | ![22](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/44.svg) | ![23](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/45.svg) | ![24](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/46.svg) |
+| **蓝色** | ![25](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/51.svg) | ![26](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/52.svg) | ![27](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/53.svg) | ![28](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/54.svg) | ![29](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/55.svg) | ![30](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/56.svg) |
+| **紫色** | ![31](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/61.svg) | ![32](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/62.svg) | ![33](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/63.svg) | ![34](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/64.svg) | ![35](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/65.svg) | ![36](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/66.svg) |
+| **灰色** | ![37](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/71.svg) | ![38](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/72.svg) | ![39](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/73.svg) | ![40](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/74.svg) | ![41](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/75.svg) | ![42](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/76.svg) |
 
 
 - JSON结果
