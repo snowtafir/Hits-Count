@@ -1,4 +1,4 @@
-// Update Version 2025-03-31
+// Update Version 2025-06-08
 export default {
   async fetch(request, env, ctx) {
     return handleRequest(request, env.HITS)
@@ -38,15 +38,21 @@ async function handleRequest(request, db) {
     return new Response('Not Found', { status: 404 })
   }
 
+  const params = url.searchParams;
   const pathParts = url.pathname.split('/').filter(Boolean)
   const counterName = pathParts[0]?.replace('.svg', '')
+  const histroyName = pathParts[1]?.replace('.svg', '')
 
-  if (!ALLOWED_PATHS.includes(counterName)) {
+  if (
+    !ALLOWED_PATHS.includes(counterName) && 
+    !(pathParts[0] === 'history' && ALLOWED_PATHS.includes(histroyName))
+  ) {
     return new Response('Not Found', { status: 404 })
   }
 
-  const action = url.searchParams.get('action') || 'view'
-  const isSvg = url.pathname.endsWith('.svg')
+  const action = params.get('action') || 'view'
+  const isSvg = url.pathname === `/${counterName}.svg`
+  const isHistory = pathParts[0] === 'history'
   const today = new Date().toISOString().split('T')[0]
 
   const totalKey = `${counterName}:total`
@@ -63,10 +69,10 @@ async function handleRequest(request, db) {
   }
 
   if (isSvg) {
-    const countBg = url.searchParams.get('count_bg') || '#79C83D'
-    const titleBg = url.searchParams.get('title_bg') || '#555555'
-    const title = url.searchParams.get('title') || 'Hits'
-    const edgeFlat = url.searchParams.get('edge_flat') === 'true'
+    const countBg = params.get('count_bg') || '#79C83D'
+    const titleBg = params.get('title_bg') || '#555555'
+    const title = params.get('title') || 'Hits'
+    const edgeFlat = params.get('edge_flat') === 'true'
 
     const svg = generateSvg({
       title,
@@ -85,6 +91,152 @@ async function handleRequest(request, db) {
         'Expires': '0'
       }
     })
+  }
+
+  if (isHistory) {
+    const days = parseInt(params.get('days')) || 7;
+    const chartType = params.get('chartType') || 'scatter';
+    const customTitle = params.get('title') || `${histroyName} Daily Clicks (Last ${days} Days)`;
+    const svgWidth = parseInt(params.get('width')) || 600;
+    const svgHeight = parseInt(params.get('height')) || 400;
+    const chartColor = params.get('color') || 'steelblue';
+
+    const endDate = new Date();
+    endDate.setHours(0, 0, 0, 0);
+    const startDate = new Date(endDate);
+    startDate.setDate(endDate.getDate() - days + 1);
+
+    const formatDateForSQL = (date) => date.toISOString().split('T')[0];
+
+    try {
+      const query = `
+        SELECT name, count 
+        FROM counters 
+        WHERE name LIKE ? 
+        AND name LIKE '%:daily:%'
+        AND DATE(SUBSTR(name, LENGTH('${histroyName}:daily:') + 1)) BETWEEN ? AND ?
+        ORDER BY name ASC;
+      `;
+      const stmt = db.prepare(query);
+      const { results } = await stmt.bind(
+        `${histroyName}:daily:%`,
+        formatDateForSQL(startDate),
+        formatDateForSQL(endDate)
+      ).all();
+
+      if (!results || results.length === 0) {
+        return new Response('No data found', { status: 404 });
+      }
+
+      const dates = results.map(row => row.name.split(':')[2]);
+      const counts = results.map(row => row.count);
+      const maxCount = Math.max(...counts, 1);
+
+      const padding = Math.min(50, svgWidth * 0.08);
+      const xStep = (svgWidth - 2 * padding) / (days - 1);
+
+      let svg = `<svg width="${svgWidth}" height="${svgHeight}" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="#f8f9fa"/>
+        <text x="${svgWidth / 2}" y="30" text-anchor="middle" font-family="Arial" font-size="16">
+          ${customTitle}
+        </text>`;
+
+      let xshift = 0;
+      if (chartType === 'bar') {
+        xshift = xStep;
+      }
+      svg += `
+        <path d="M${padding},${svgHeight - padding} L${svgWidth - padding + xshift},${svgHeight - padding}" 
+              stroke="black" stroke-width="2"/>
+        <path d="M${padding},${svgHeight - padding} L${padding},${padding}" 
+              stroke="black" stroke-width="2"/>
+      `;
+
+      const maxTicks = 15;
+      const tickInterval = Math.max(1, Math.floor(days / maxTicks));
+      
+      for (let i = 0; i < days; i += tickInterval) {
+        let x = padding + i * xStep;
+        
+        if (chartType === 'bar') {
+          x += xStep * 0.7;
+        }
+      
+        const dateLabel = dates[i] ? dates[i].split('-').slice(1).join('-') : '';
+        
+        svg += `
+          <path d="M${x},${svgHeight-padding} L${x},${svgHeight-padding+5}" 
+                stroke="black" stroke-width="1"/>
+          <text x="${x}" y="${svgHeight-padding+20}" 
+                text-anchor="middle" font-size="10">
+            ${dateLabel}
+          </text>
+        `;
+      }
+
+      const yStep = (svgHeight - 2 * padding) / 5;
+      for (let i = 0; i <= 5; i++) {
+        const y = svgHeight - padding - i * yStep;
+        const value = Math.round((maxCount * i) / 5);
+        svg += `
+          <path d="M${padding - 5},${y} L${padding},${y}" 
+                stroke="black" stroke-width="1"/>
+          <text x="${padding - 10}" y="${y + 5}" 
+                text-anchor="end" font-family="Arial" font-size="12">
+            ${value}
+          </text>
+        `;
+      }
+
+      if (chartType === 'bar') {
+        const barWidth = xStep * 0.618;
+        const barGap = xStep * 0.382;
+  
+        for (let i = 0; i < counts.length; i++) {
+          const x = padding + barGap + i * xStep;
+          const y = svgHeight - padding - (counts[i] / maxCount) * (svgHeight - 2 * padding);
+          const height = (counts[i] / maxCount) * (svgHeight - 2 * padding);
+    
+          svg += `
+          <rect x="${x}" y="${y}" 
+          width="${barWidth}" height="${height}"
+          fill="${chartColor}" opacity="0.8"/>
+          <text x="${x + barWidth/2}" y="${y - 5}" 
+          text-anchor="middle" font-size="10">
+          ${counts[i]}
+          </text>
+          `;
+        }
+      } else {
+        let pathData = '';
+        for (let i = 0; i < counts.length; i++) {
+          const x = padding + i * xStep;
+          const y = svgHeight - padding - (counts[i] / maxCount) * (svgHeight - 2 * padding);
+          if (i === 0) pathData += `M${x},${y}`;
+          else pathData += ` L${x},${y}`;
+          
+          svg += `
+            <circle cx="${x}" cy="${y}" r="4" fill="${chartColor}"/>
+            <text x="${x}" y="${y - 5}" 
+                  text-anchor="middle" font-family="Arial" font-size="${svgWidth > 700 ? 12 : 10}">
+              ${counts[i]}
+            </text>
+          `;
+        }
+        svg += `<path d="${pathData}" stroke="${chartColor}" stroke-width="2" fill="none"/>`;
+      }
+
+      svg += '</svg>';
+      return new Response(svg, {
+        headers: {
+          'Content-Type': 'image/svg+xml',
+          'Cache-Control': 'public, max-age=3600',
+          'Expires': new Date(Date.now() + 3600000).toUTCString()
+        }
+      });
+    } catch (error) {
+      return new Response(`Error: ${error.message}`, { status: 500 });
+    }
   }
 
   const responseData = {
