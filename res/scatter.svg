@@ -1,0 +1,350 @@
+<svg width="1024" height="400" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="#f8f9fa"/>
+        <text x="512" y="30" text-anchor="middle" font-family="Arial" font-size="16">
+          Daily Runs of IP Quality Script
+        </text>
+        <path d="M50,350 L974,350" 
+              stroke="black" stroke-width="2"/>
+        <path d="M50,350 L50,50" 
+              stroke="black" stroke-width="2"/>
+      
+          <path d="M50,350 L50,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="50" y="370" 
+                text-anchor="middle" font-size="10">
+            05-09
+          </text>
+        
+          <path d="M111.6,350 L111.6,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="111.6" y="370" 
+                text-anchor="middle" font-size="10">
+            05-11
+          </text>
+        
+          <path d="M173.2,350 L173.2,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="173.2" y="370" 
+                text-anchor="middle" font-size="10">
+            05-13
+          </text>
+        
+          <path d="M234.8,350 L234.8,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="234.8" y="370" 
+                text-anchor="middle" font-size="10">
+            05-15
+          </text>
+        
+          <path d="M296.4,350 L296.4,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="296.4" y="370" 
+                text-anchor="middle" font-size="10">
+            05-17
+          </text>
+        
+          <path d="M358,350 L358,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="358" y="370" 
+                text-anchor="middle" font-size="10">
+            05-19
+          </text>
+        
+          <path d="M419.6,350 L419.6,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="419.6" y="370" 
+                text-anchor="middle" font-size="10">
+            05-21
+          </text>
+        
+          <path d="M481.2,350 L481.2,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="481.2" y="370" 
+                text-anchor="middle" font-size="10">
+            05-23
+          </text>
+        
+          <path d="M542.8,350 L542.8,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="542.8" y="370" 
+                text-anchor="middle" font-size="10">
+            05-25
+          </text>
+        
+          <path d="M604.4,350 L604.4,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="604.4" y="370" 
+                text-anchor="middle" font-size="10">
+            05-27
+          </text>
+        
+          <path d="M666,350 L666,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="666" y="370" 
+                text-anchor="middle" font-size="10">
+            05-29
+          </text>
+        
+          <path d="M727.6,350 L727.6,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="727.6" y="370" 
+                text-anchor="middle" font-size="10">
+            05-31
+          </text>
+        
+          <path d="M789.2,350 L789.2,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="789.2" y="370" 
+                text-anchor="middle" font-size="10">
+            06-02
+          </text>
+        
+          <path d="M850.8000000000001,350 L850.8000000000001,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="850.8000000000001" y="370" 
+                text-anchor="middle" font-size="10">
+            06-04
+          </text>
+        
+          <path d="M912.4,350 L912.4,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="912.4" y="370" 
+                text-anchor="middle" font-size="10">
+            06-06
+          </text>
+        
+          <path d="M974,350 L974,355" 
+                stroke="black" stroke-width="1"/>
+          <text x="974" y="370" 
+                text-anchor="middle" font-size="10">
+            06-08
+          </text>
+        
+          <path d="M45,350 L50,350" 
+                stroke="black" stroke-width="1"/>
+          <text x="40" y="355" 
+                text-anchor="end" font-family="Arial" font-size="12">
+            0
+          </text>
+        
+          <path d="M45,290 L50,290" 
+                stroke="black" stroke-width="1"/>
+          <text x="40" y="295" 
+                text-anchor="end" font-family="Arial" font-size="12">
+            500
+          </text>
+        
+          <path d="M45,230 L50,230" 
+                stroke="black" stroke-width="1"/>
+          <text x="40" y="235" 
+                text-anchor="end" font-family="Arial" font-size="12">
+            1001
+          </text>
+        
+          <path d="M45,170 L50,170" 
+                stroke="black" stroke-width="1"/>
+          <text x="40" y="175" 
+                text-anchor="end" font-family="Arial" font-size="12">
+            1501
+          </text>
+        
+          <path d="M45,110 L50,110" 
+                stroke="black" stroke-width="1"/>
+          <text x="40" y="115" 
+                text-anchor="end" font-family="Arial" font-size="12">
+            2002
+          </text>
+        
+          <path d="M45,50 L50,50" 
+                stroke="black" stroke-width="1"/>
+          <text x="40" y="55" 
+                text-anchor="end" font-family="Arial" font-size="12">
+            2502
+          </text>
+        
+            <circle cx="50" cy="76.73860911270987" r="4" fill="green"/>
+            <text x="50" y="71.73860911270987" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2279
+            </text>
+          
+            <circle cx="80.8" cy="123.8609112709832" r="4" fill="green"/>
+            <text x="80.8" y="118.8609112709832" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1886
+            </text>
+          
+            <circle cx="111.6" cy="150.71942446043167" r="4" fill="green"/>
+            <text x="111.6" y="145.71942446043167" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1662
+            </text>
+          
+            <circle cx="142.4" cy="110.91127098321343" r="4" fill="green"/>
+            <text x="142.4" y="105.91127098321343" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1994
+            </text>
+          
+            <circle cx="173.2" cy="102.5179856115108" r="4" fill="green"/>
+            <text x="173.2" y="97.5179856115108" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2064
+            </text>
+          
+            <circle cx="204" cy="50" r="4" fill="green"/>
+            <text x="204" y="45" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2502
+            </text>
+          
+            <circle cx="234.8" cy="100.95923261390888" r="4" fill="green"/>
+            <text x="234.8" y="95.95923261390888" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2077
+            </text>
+          
+            <circle cx="265.6" cy="109.95203836930457" r="4" fill="green"/>
+            <text x="265.6" y="104.95203836930457" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2002
+            </text>
+          
+            <circle cx="296.4" cy="114.74820143884892" r="4" fill="green"/>
+            <text x="296.4" y="109.74820143884892" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1962
+            </text>
+          
+            <circle cx="327.2" cy="80.33573141486812" r="4" fill="green"/>
+            <text x="327.2" y="75.33573141486812" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2249
+            </text>
+          
+            <circle cx="358" cy="71.2230215827338" r="4" fill="green"/>
+            <text x="358" y="66.2230215827338" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2325
+            </text>
+          
+            <circle cx="388.8" cy="53.59712230215831" r="4" fill="green"/>
+            <text x="388.8" y="48.59712230215831" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2472
+            </text>
+          
+            <circle cx="419.6" cy="88.24940047961633" r="4" fill="green"/>
+            <text x="419.6" y="83.24940047961633" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2183
+            </text>
+          
+            <circle cx="450.40000000000003" cy="106.83453237410075" r="4" fill="green"/>
+            <text x="450.40000000000003" y="101.83453237410075" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2028
+            </text>
+          
+            <circle cx="481.2" cy="67.62589928057554" r="4" fill="green"/>
+            <text x="481.2" y="62.62589928057554" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2355
+            </text>
+          
+            <circle cx="512" cy="114.50839328537171" r="4" fill="green"/>
+            <text x="512" y="109.50839328537171" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1964
+            </text>
+          
+            <circle cx="542.8" cy="130.69544364508394" r="4" fill="green"/>
+            <text x="542.8" y="125.69544364508394" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1829
+            </text>
+          
+            <circle cx="573.6" cy="123.50119904076737" r="4" fill="green"/>
+            <text x="573.6" y="118.50119904076737" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1889
+            </text>
+          
+            <circle cx="604.4" cy="54.31654676258995" r="4" fill="green"/>
+            <text x="604.4" y="49.31654676258995" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2466
+            </text>
+          
+            <circle cx="635.2" cy="80.69544364508391" r="4" fill="green"/>
+            <text x="635.2" y="75.69544364508391" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2246
+            </text>
+          
+            <circle cx="666" cy="65.46762589928056" r="4" fill="green"/>
+            <text x="666" y="60.46762589928056" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2373
+            </text>
+          
+            <circle cx="696.8000000000001" cy="59.83213429256597" r="4" fill="green"/>
+            <text x="696.8000000000001" y="54.83213429256597" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2420
+            </text>
+          
+            <circle cx="727.6" cy="92.44604316546764" r="4" fill="green"/>
+            <text x="727.6" y="87.44604316546764" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2148
+            </text>
+          
+            <circle cx="758.4" cy="130.57553956834533" r="4" fill="green"/>
+            <text x="758.4" y="125.57553956834533" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1830
+            </text>
+          
+            <circle cx="789.2" cy="127.45803357314148" r="4" fill="green"/>
+            <text x="789.2" y="122.45803357314148" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1856
+            </text>
+          
+            <circle cx="820" cy="106.95443645083932" r="4" fill="green"/>
+            <text x="820" y="101.95443645083932" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2027
+            </text>
+          
+            <circle cx="850.8000000000001" cy="92.56594724220622" r="4" fill="green"/>
+            <text x="850.8000000000001" y="87.56594724220622" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2147
+            </text>
+          
+            <circle cx="881.6" cy="81.05515587529976" r="4" fill="green"/>
+            <text x="881.6" y="76.05515587529976" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2243
+            </text>
+          
+            <circle cx="912.4" cy="80.21582733812949" r="4" fill="green"/>
+            <text x="912.4" y="75.21582733812949" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              2250
+            </text>
+          
+            <circle cx="943.2" cy="122.1822541966427" r="4" fill="green"/>
+            <text x="943.2" y="117.1822541966427" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              1900
+            </text>
+          
+            <circle cx="974" cy="308.63309352517985" r="4" fill="green"/>
+            <text x="974" y="303.63309352517985" 
+                  text-anchor="middle" font-family="Arial" font-size="12">
+              345
+            </text>
+          <path d="M50,76.73860911270987 L80.8,123.8609112709832 L111.6,150.71942446043167 L142.4,110.91127098321343 L173.2,102.5179856115108 L204,50 L234.8,100.95923261390888 L265.6,109.95203836930457 L296.4,114.74820143884892 L327.2,80.33573141486812 L358,71.2230215827338 L388.8,53.59712230215831 L419.6,88.24940047961633 L450.40000000000003,106.83453237410075 L481.2,67.62589928057554 L512,114.50839328537171 L542.8,130.69544364508394 L573.6,123.50119904076737 L604.4,54.31654676258995 L635.2,80.69544364508391 L666,65.46762589928056 L696.8000000000001,59.83213429256597 L727.6,92.44604316546764 L758.4,130.57553956834533 L789.2,127.45803357314148 L820,106.95443645083932 L850.8000000000001,92.56594724220622 L881.6,81.05515587529976 L912.4,80.21582733812949 L943.2,122.1822541966427 L974,308.63309352517985" stroke="green" stroke-width="2" fill="none"/></svg>
