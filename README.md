@@ -1,7 +1,7 @@
 # Hits! - General purpose hits counter based on Cloudflare Workers （[中文说明](https://github.com/xykt/Hits/blob/main/README_CN.md)）
 <p>
 <img src="https://hits.xykt.de/hits_github.svg?action=hit&count_bg=%23FFA552&title_bg=%231D8834&title=Hits!&edge_flat=false"/>
-<img src="https://img.shields.io/badge/Version-2025--03--31-green"/>
+<img src="https://img.shields.io/badge/Version-2025--06--08-green"/>
 <img src="https://img.shields.io/badge/Uptime-100%25-green"/>
 <img src="https://img.shields.io/badge/Deploy-Serverless-blue"/>
 <img src="https://img.shields.io/badge/Cost-FREE-blue"/>
@@ -96,6 +96,26 @@ JSON Response
   "timestamp": "2025-03-31T04:08:16.512Z"
 }
 ```
+
+- History Chart
+
+```url
+https://your.domain/history/keyword.svg?days=31&chartType=bar&title=Chart%20Title&width=1024&height=400&color=green
+```
+
+| Parameter  | Values               | Description                       | 说明                        |
+|------------|----------------------|-----------------------------------|----------------------------|
+| days       | {days_number}        | Statistical days                  | 统计天数                    |
+| chartType  | bar / scatter        | Chart type: bar / scaater         | 图表类型：柱状图 / 散点图     |
+| title      | {title_text}         | Chart title                       | 图表标题                    |
+| width      | {width_pixels}       | Chart width                       | 图表宽度                    |
+| height     | {height_pixels}      | Chart height                      | 图表高度                    |
+| color      | %23{colorcode}       | Chart color                       | 图表颜色                    |
+
+| Chart Type | Sample               |
+|------------|----------------------|
+| Scatter    | ![scatter](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/scatter.svg)|
+| Bar        | ![bar](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/bar.svg)        |
 
 ### Acknowledgements
 
