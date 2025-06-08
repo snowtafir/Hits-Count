@@ -1,7 +1,7 @@
 # Hits! - 基于Cloudflare Workers的综合访问计数器
 <p>
 <img src="https://hits.xykt.de/hits_github.svg?action=hit&count_bg=%23FFA552&title_bg=%231D8834&title=Hits!&edge_flat=false"/>
-<img src="https://img.shields.io/badge/Version-2025--03--31-green"/>
+<img src="https://img.shields.io/badge/Version-2025--06--08-green"/>
 <img src="https://img.shields.io/badge/Uptime-100%25-green"/>
 <img src="https://img.shields.io/badge/Deploy-Serverless-blue"/>
 <img src="https://img.shields.io/badge/Cost-FREE-blue"/>
@@ -47,7 +47,7 @@ CREATE TABLE counters ( name TEXT PRIMARY KEY, count INTEGER DEFAULT 0 );
 https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
 ```
 
-| 参数  | 值               | Description                       | 说明                         |
+| 参数        | 值                   | Description                       | 说明                         |
 |------------|----------------------|-----------------------------------|----------------------------|
 | action     | view / hit           | View only or hit & view           | 仅展示/点击并展示           |
 | count_bg   | %23{colorcode}        | Background color of count area    | 数字部分背景颜色            |
@@ -96,6 +96,26 @@ https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%2355555
   "timestamp": "2025-03-31T04:08:16.512Z"
 }
 ```
+
+- 历史统计图
+
+```url
+https://your.domain/history/keyword.svg?days=31&chartType=bar&title=Chart%20Title&width=1024&height=400&color=green
+```
+
+| 参数       | 值                   | Description                       | 说明                        |
+|------------|----------------------|-----------------------------------|----------------------------|
+| days       | {days_number}        | Statistical days                  | 统计天数                    |
+| chartType  | bar / scatter        | Chart type: bar / scaater         | 图表类型：柱状图 / 散点图     |
+| title      | {title_text}         | Chart title                       | 图表标题                    |
+| width      | {width_pixels}       | Chart width                       | 图表宽度                    |
+| height     | {height_pixels}      | Chart height                      | 图表高度                    |
+| color      | %23{colorcode}       | Chart color                       | 图表颜色                    |
+
+| 图表类型    | 示例                 |
+|------------|----------------------|
+| 散点图      | ![scatter](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/scatter.svg)|
+| 柱状图      | ![bar](https://raw.githubusercontent.com/xykt/Hits/refs/heads/main/res/bar.svg)        |
 
 ### 🤝 贡献
 
