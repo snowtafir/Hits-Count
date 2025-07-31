@@ -1,0 +1,5 @@
+name = "hits-count"
+main = "hits.js"
+compatibility_date = "2025-07-31"
+version = "1.0.0"
+description = "A simple program to count the number of hits on a website."
