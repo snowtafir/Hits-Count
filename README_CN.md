@@ -47,6 +47,12 @@ CREATE TABLE counters ( name TEXT PRIMARY KEY, count INTEGER DEFAULT 0 );
 https://your.domain/keyword.svg?action=view&count_bg=%233DC8C0&title_bg=%23555555&title=Visits&edge_flat=false
 ```
 
+- 仓库访问统计
+
+```url
+![访问统计](https://你的服务地址/readme.svg?repo=yourname/yourrepo&action=hit)
+```
+
 | 参数        | 值                   | Description                       | 说明                         |
 |------------|----------------------|-----------------------------------|----------------------------|
 | action     | view / hit           | View only or hit & view           | 仅展示/点击并展示           |

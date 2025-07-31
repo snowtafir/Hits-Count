@@ -1,11 +1,10 @@
-// Update Version 2025-06-08
+// Update Version 2025-07-31
 export default {
   async fetch(request, env, ctx) {
     return handleRequest(request, env.HITS)
   }
 }
 
-// Replace this part with your domain and keyword(s)
 const ALLOWED_DOMAIN = 'your.domain.com'
 const ALLOWED_PATHS = ['keyword1', 'keyword2', 'keyword3']
 
@@ -31,30 +30,48 @@ const aliases = {
   inactive: 'lightgrey',
 }
 
+// 仓库地址有效性校验（仅支持 GitHub 仓库，格式：owner/repo）
+function isValidRepo(repo) {
+  if (!repo) return false
+  // 只允许字母、数字、-、_、.，且必须有一个斜杠分隔 owner 和 repo
+  return /^[a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+$/.test(repo)
+}
+
 async function handleRequest(request, db) {
   const url = new URL(request.url)
-
-  if (url.hostname !== ALLOWED_DOMAIN) {
-    return new Response('Not Found', { status: 404 })
-  }
-
-  const params = url.searchParams;
+  const params = url.searchParams
   const pathParts = url.pathname.split('/').filter(Boolean)
-  const counterName = pathParts[0]?.replace('.svg', '')
-  const histroyName = pathParts[1]?.replace('.svg', '')
 
-  if (
-    !ALLOWED_PATHS.includes(counterName) && 
-    !(pathParts[0] === 'history' && ALLOWED_PATHS.includes(histroyName))
-  ) {
-    return new Response('Not Found', { status: 404 })
+  // 新增：README 统计特殊处理
+  const isReadmeSvg = pathParts[0] === 'readme.svg'
+  let counterName, histroyName, isSvg, isHistory, repoMode = false
+
+  if (isReadmeSvg) {
+    const repo = params.get('repo')
+    if (!isValidRepo(repo)) {
+      return new Response('Invalid repo parameter', { status: 400 })
+    }
+    counterName = `repo:${repo}`
+    isSvg = true
+    isHistory = false
+    repoMode = true
+    // README 统计不做域名和路径限制
+  } else {
+    counterName = pathParts[0]?.replace('.svg', '')
+    histroyName = pathParts[1]?.replace('.svg', '')
+    isSvg = url.pathname === `/${counterName}.svg`
+    isHistory = pathParts[0] === 'history'
+    // 原有域名和路径限制
+    if (
+      url.hostname !== ALLOWED_DOMAIN ||
+      (!ALLOWED_PATHS.includes(counterName) && !(isHistory && ALLOWED_PATHS.includes(histroyName)))
+    ) {
+      return new Response('Not Found', { status: 404 })
+    }
   }
 
   const action = params.get('action') || 'view'
-  const isSvg = url.pathname === `/${counterName}.svg`
-  const isHistory = pathParts[0] === 'history'
   const today = new Date().toISOString().split('T')[0]
-
   const totalKey = `${counterName}:total`
   const dailyKey = `${counterName}:daily:${today}`
 
@@ -71,7 +88,7 @@ async function handleRequest(request, db) {
   if (isSvg) {
     const countBg = params.get('count_bg') || '#79C83D'
     const titleBg = params.get('title_bg') || '#555555'
-    const title = params.get('title') || 'Hits'
+    const title = params.get('title') || (repoMode ? 'Repo Hits' : 'Hits')
     const edgeFlat = params.get('edge_flat') === 'true'
 
     const svg = generateSvg({
@@ -154,20 +171,20 @@ async function handleRequest(request, db) {
 
       const maxTicks = 15;
       const tickInterval = Math.max(1, Math.floor(days / maxTicks));
-      
+
       for (let i = 0; i < days; i += tickInterval) {
         let x = padding + i * xStep;
-        
+
         if (chartType === 'bar') {
           x += xStep * 0.7;
         }
-      
+
         const dateLabel = dates[i] ? dates[i].split('-').slice(1).join('-') : '';
-        
+
         svg += `
-          <path d="M${x},${svgHeight-padding} L${x},${svgHeight-padding+5}" 
+          <path d="M${x},${svgHeight - padding} L${x},${svgHeight - padding + 5}" 
                 stroke="black" stroke-width="1"/>
-          <text x="${x}" y="${svgHeight-padding+20}" 
+          <text x="${x}" y="${svgHeight - padding + 20}" 
                 text-anchor="middle" font-size="10">
             ${dateLabel}
           </text>
@@ -191,17 +208,17 @@ async function handleRequest(request, db) {
       if (chartType === 'bar') {
         const barWidth = xStep * 0.618;
         const barGap = xStep * 0.382;
-  
+
         for (let i = 0; i < counts.length; i++) {
           const x = padding + barGap + i * xStep;
           const y = svgHeight - padding - (counts[i] / maxCount) * (svgHeight - 2 * padding);
           const height = (counts[i] / maxCount) * (svgHeight - 2 * padding);
-    
+
           svg += `
           <rect x="${x}" y="${y}" 
           width="${barWidth}" height="${height}"
           fill="${chartColor}" opacity="0.8"/>
-          <text x="${x + barWidth/2}" y="${y - 5}" 
+          <text x="${x + barWidth / 2}" y="${y - 5}" 
           text-anchor="middle" font-size="10">
           ${counts[i]}
           </text>
@@ -214,7 +231,7 @@ async function handleRequest(request, db) {
           const y = svgHeight - padding - (counts[i] / maxCount) * (svgHeight - 2 * padding);
           if (i === 0) pathData += `M${x},${y}`;
           else pathData += ` L${x},${y}`;
-          
+
           svg += `
             <circle cx="${x}" cy="${y}" r="4" fill="${chartColor}"/>
             <text x="${x}" y="${y - 5}" 
@@ -310,10 +327,10 @@ function generateSvg({ title, titleBg = 'grey', countBg = 'green', edgeFlat, dai
   </g>
 
   <g fill="#fff" text-anchor="middle" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="11">
-    <text x="${titleWidth/2}" y="15" fill="#010101" fill-opacity=".3">${title}</text>
-    <text x="${titleWidth/2}" y="14" fill="#fff">${title}</text>
-    <text x="${titleWidth + countWidth/2}" y="15" fill="#010101" fill-opacity=".3">${countText}</text>
-    <text x="${titleWidth + countWidth/2}" y="14" fill="#fff">${countText}</text>
+    <text x="${titleWidth / 2}" y="15" fill="#010101" fill-opacity=".3">${title}</text>
+    <text x="${titleWidth / 2}" y="14" fill="#fff">${title}</text>
+    <text x="${titleWidth + countWidth / 2}" y="15" fill="#010101" fill-opacity=".3">${countText}</text>
+    <text x="${titleWidth + countWidth / 2}" y="14" fill="#fff">${countText}</text>
   </g>
 </svg>
   `.trim()
